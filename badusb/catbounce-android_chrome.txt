@@ -1,0 +1,32 @@
+REM Launch a url on a Android phone using Google Chrome.
+REM Credit: Jagerbob
+
+REM Open browser
+GUI b
+DELAY 500
+
+REM Open a new tab
+CTRL t
+DELAY 500
+
+REM Open search bar
+CTRL l
+DELAY 1000
+
+REM For BE layouts, Android seems broken and a few mappings are needed:
+REM ":" = "." & "=" = "/" & ")" = "-"
+REM I might fix that by providing an updated keyboard for Android
+
+REM Type the address (cat-bounce.com)
+REM Delay between word seems to be needed on the tested Chrome version
+STRING cat
+DELAY 200
+STRING )
+DELAY 200
+STRING bounce
+DELAY 200
+STRING :com
+DELAY 200
+ENTER
+DELAY 200
+ENTER
